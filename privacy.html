@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politică de confidențialitate — Multi Player</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 760px; margin: 2.5rem auto; padding: 0 1.25rem; color: #1a1a1a; }
+  @media (prefers-color-scheme: dark) { body { background:#0a0a0a; color:#e0e0e0; } a { color:#bb86fc; } }
+  h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; color: #6200ee; }
+  @media (prefers-color-scheme: dark) { h2 { color: #bb86fc; } }
+  .sub { color: #888; margin-top: 0; }
+  ul { padding-left: 1.25rem; }
+  code { background: rgba(127,127,127,.15); padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  .lang-switch { float: right; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <p class="lang-switch"><a href="#en">English version below ↓</a></p>
+  <h1>Politică de confidențialitate</h1>
+  <p class="sub">Actualizat: mai 2026</p>
+
+  <h2>Pe scurt</h2>
+  <p><strong>Multi Player nu colectează, nu transmite și nu vinde date personale.</strong>
+     Toate setările și istoricul rămân exclusiv pe dispozitivul tău.</p>
+
+  <h2>Ce stochează aplicația local pe dispozitivul tău</h2>
+  <ul>
+    <li><strong>Istoric stream-uri</strong>: URL, nume, marcaj favorit, ultima poziție de redare (în <code>SharedPreferences</code> / iOS <code>UserDefaults</code>).</li>
+    <li><strong>Setări</strong>: User-Agent implicit, Referer implicit, preferințele de auto-paste.</li>
+    <li><strong>Playlist-uri M3U importate</strong>: conținutul fișierelor M3U pe care le adaugi.</li>
+    <li><strong>Cache EPG</strong>: ghidul de programe descărcat din URL-urile XMLTV declarate în playlist-urile tale (folder documente al aplicației).</li>
+  </ul>
+  <p>Toate aceste date sunt accesibile <em>doar aplicației pe dispozitivul tău</em>. Pot fi șterse oricând din ecranul <em>Settings → Șterge tot istoricul</em> sau prin dezinstalarea aplicației.</p>
+
+  <h2>Ce NU face aplicația</h2>
+  <ul>
+    <li>Nu trimite URL-urile stream-urilor tale către niciun server al nostru.</li>
+    <li>Nu creează cont, nu cere login, nu cere email.</li>
+    <li>Nu folosește servicii de analytics (Firebase, Google Analytics, Mixpanel etc.).</li>
+    <li>Nu afișează reclame.</li>
+    <li>Nu accesează contactele, localizarea, camera sau microfonul.</li>
+  </ul>
+
+  <h2>Conexiuni la rețea — ce iese din aplicație</h2>
+  <ul>
+    <li><strong>Către URL-urile stream-urilor pe care le redai</strong> — serverele lor pot vedea adresa IP a dispozitivului tău și User-Agent-ul HTTP (Apple AVPlayer pe iOS sau ExoPlayer pe Android). Asta e inerent reproducerii video și e identic cu deschiderea aceluiași link în browser.</li>
+    <li><strong>Către URL-urile EPG (XMLTV)</strong> declarate în playlist-urile tale, când apeși <em>Refresh EPG</em>.</li>
+    <li><strong>Către logo-urile canalelor</strong> (CDN-uri externe) când răsfoiești lista de canale.</li>
+    <li><strong>Către Google Cast / Chromecast</strong> când folosești funcția de cast — protocol Google Cast SDK. Vezi <a href="https://policies.google.com/privacy">politica Google</a>.</li>
+  </ul>
+
+  <h2>Permisiuni cerute</h2>
+  <ul>
+    <li><code>INTERNET</code> — descărcare stream-uri, playlist-uri, EPG.</li>
+    <li><code>ACCESS_NETWORK_STATE</code> — detectare lipsă conexiune.</li>
+    <li><code>FOREGROUND_SERVICE</code> + <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> (Android) / <code>UIBackgroundModes audio</code> (iOS) — redare continuă când aplicația e în background.</li>
+    <li><code>POST_NOTIFICATIONS</code> (Android 13+) — afișarea notificării media cu controale (play/pauză).</li>
+    <li><code>WAKE_LOCK</code> — ținut ecranul aprins în timpul redării.</li>
+    <li><code>NSLocalNetworkUsageDescription</code> + <code>NSBonjourServices</code> (iOS) — descoperirea dispozitivelor Chromecast/Google Cast pe rețeaua locală.</li>
+  </ul>
+
+  <h2>Copii sub 13 ani</h2>
+  <p>Aplicația nu colectează date despre nimeni — deci nici despre copii. Nu există conturi de utilizator.</p>
+
+  <h2>Modificări ale acestei politici</h2>
+  <p>Dacă politica se schimbă, pagina aceasta va fi actualizată cu noua dată de actualizare în partea de sus. Schimbări semnificative vor fi reflectate într-o nouă versiune a aplicației.</p>
+
+  <h2>Contact</h2>
+  <p>Pentru întrebări privind această politică: <a href="mailto:b93kts@gmail.com">b93kts@gmail.com</a>.</p>
+
+  <hr style="margin:3rem 0;opacity:.3">
+
+  <h1 id="en">Privacy Policy</h1>
+  <p class="sub">Updated: May 2026</p>
+
+  <h2>TL;DR</h2>
+  <p><strong>Multi Player does not collect, transmit or sell personal data.</strong>
+     All your settings and history stay exclusively on your device.</p>
+
+  <h2>What the app stores locally on your device</h2>
+  <ul>
+    <li><strong>Stream history</strong>: URL, name, favorite flag, last playback position (in <code>SharedPreferences</code> / iOS <code>UserDefaults</code>).</li>
+    <li><strong>Settings</strong>: default User-Agent, default Referer, auto-paste preference.</li>
+    <li><strong>Imported M3U playlists</strong>: the raw content of M3U files you add.</li>
+    <li><strong>EPG cache</strong>: program guide downloaded from the XMLTV URLs declared in your playlists (app documents directory).</li>
+  </ul>
+  <p>All this data is accessible <em>only to the app on your device</em>. You can wipe it any time from <em>Settings → Clear all history</em>, or by uninstalling the app.</p>
+
+  <h2>What the app does NOT do</h2>
+  <ul>
+    <li>Does not send your stream URLs to any server of ours.</li>
+    <li>Does not create accounts, ask for login, or ask for email.</li>
+    <li>Does not use analytics services (Firebase, Google Analytics, Mixpanel, etc.).</li>
+    <li>Does not display advertisements.</li>
+    <li>Does not access contacts, location, camera or microphone.</li>
+  </ul>
+
+  <h2>Network connections — what leaves the app</h2>
+  <ul>
+    <li><strong>To the stream URLs you play</strong> — those servers can see your device's IP address and HTTP User-Agent (Apple AVPlayer on iOS or ExoPlayer on Android). This is inherent to video playback and is identical to opening the same link in a browser.</li>
+    <li><strong>To EPG (XMLTV) URLs</strong> declared in your playlists, when you tap <em>Refresh EPG</em>.</li>
+    <li><strong>To channel logos</strong> (external CDNs) while browsing the channel list.</li>
+    <li><strong>To Google Cast / Chromecast</strong> when you use the cast feature — Google Cast SDK protocol. See <a href="https://policies.google.com/privacy">Google's policy</a>.</li>
+  </ul>
+
+  <h2>Children under 13</h2>
+  <p>The app collects no data about anyone — therefore none about children. There are no user accounts.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the policy changes, this page will be updated with the new "Updated" date at the top. Material changes will be reflected in a new app version.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about this policy: <a href="mailto:b93kts@gmail.com">b93kts@gmail.com</a>.</p>
+
+  <p style="margin-top:3rem"><a href="index.html">← Back</a></p>
+</body>
+</html>
